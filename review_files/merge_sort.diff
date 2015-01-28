@@ -1,0 +1,45 @@
+commit d03ef04f720e36c4ee70472dc36215ea789a96eb
+Author: Chirag Aggarwal <chi6rag@gmail.com>
+Date:   Mon Dec 1 15:54:10 2014 +0530
+
+    Merge function only (without slice)
+
+diff --git a/merge_sort.rb b/merge_sort.rb
+new file mode 100644
+index 0000000..35c36c9
+--- /dev/null
++++ b/merge_sort.rb
+@@ -0,0 +1,32 @@
++a = [1,3]
++b = [2,4]
++
++def merge(a, b)
++  i=0
++  j=0
++  sorted_array = []
++  a_length = a.length
++  b_length = b.length
++  while(sorted_array.length <= (a.length + b.length))
++    if( (a[i] < b[j]) && !(a[i].nil?) && !(a[j].nil?) )
++      sorted_array.push(a[i])
++      i+=1
++    elsif( (a[i] > b[j]) && !(a[i].nil?) && !(a[j].nil?) )
++      sorted_array.push(b[j])
++      j+=1
++    elsif( (a[i] == b[j]) && !(a[i].nil?) && !(a[j].nil?) )
++      sorted_array.push(a[i])
++      sorted_array.push(b[j])
++      i+=1
++      j+=1
++    end
++    break if i==a.length
++    break if j==b.length
++  end
++  b[j..(b_length-1)].each do |element|
++    sorted_array.push(element)
++  end
++  return sorted_array
++end
++
++puts merge(a,b)
+\ No newline at end of file

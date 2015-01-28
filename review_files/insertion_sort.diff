@@ -1,0 +1,33 @@
+commit 86a7bb0b76991faf33ad0fdbc1fefc34409fc63b
+Author: Chirag Aggarwal <chi6rag@gmail.com>
+Date:   Mon Dec 1 15:53:40 2014 +0530
+
+    Insertion sort
+
+diff --git a/insertion_sort.rb b/insertion_sort.rb
+new file mode 100644
+index 0000000..d85fcd1
+--- /dev/null
++++ b/insertion_sort.rb
+@@ -0,0 +1,21 @@
++def bubble_sort(a)
++  i=0
++  while(i <= a.length-1 ) do
++    j = 0
++    element_i = a[i]
++    while( j<i )
++      if( a[i] < a[j] )
++        # Swapping positions
++        temp = a[i]
++        a[i] = a[j]
++        a[j] = temp
++      end
++      j += 1
++    end
++    i += 1
++  end
++  return a
++end
++
++a = [27,89,1,56,3]
++print bubble_sort(a)

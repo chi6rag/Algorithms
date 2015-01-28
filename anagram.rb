@@ -1,4 +1,3 @@
-
 def is_anagram(string_one, string_two)
       string_one = string_one.downcase
       string_two = string_two.downcase
@@ -27,4 +26,4 @@ def is_anagram(string_one, string_two)
       return true
     end
 
-puts is_anagram("radhika", "kaihdar")
+puts is_anagram("aaa", "bbc")
